@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Langitlangit.id - Bangun Kemandirian di Lahan Terbatas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #f9f8f3;
+      }
+      .text-olive {
+        color: #5f6f3a;
+      }
+      .bg-olive {
+        background-color: #5f6f3a;
+      }
+      .bg-dark-brown {
+        background-color: #2d241e;
+      }
+      .border-olive {
+        border-color: #5f6f3a;
+      }
+
+      /* Smooth fade-in animation on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="text-gray-900 overflow-x-hidden">
+    <!-- Header / Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-2xl font-extrabold tracking-tight z-[60] relative">Langitlangit<span class="text-olive">.id</span></div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8 font-medium">
+          <li><a href="#tentang" class="text-gray-600 hover:text-olive transition-colors">Tentang</a></li>
+          <li><a href="#sistem" class="text-gray-600 hover:text-olive transition-colors">Sistem</a></li>
+          <li><a href="#transparansi" class="text-gray-600 hover:text-olive transition-colors">Transparansi</a></li>
+          <li><a href="#kontak" class="text-gray-600 hover:text-olive transition-colors">Kontak</a></li>
+        </ul>
+
+        <!-- Desktop CTA Button -->
+        <a href="#konsultasi" class="hidden md:inline-block bg-dark-brown text-white px-6 py-2.5 text-sm font-semibold hover:bg-black transition-all"> Konsultasi Sekarang </a>
+
+        <!-- Mobile Menu Button (Premium Hamburger Animasi) -->
+        <button id="mobile-menu-btn" class="md:hidden z-[60] relative p-2 text-gray-900 focus:outline-none">
+          <div class="relative w-6 h-6 flex items-center justify-center">
+            <span id="hamburger-line-1" class="absolute w-6 h-[2px] bg-gray-900 transition-all duration-300 -translate-y-2"></span>
+            <span id="hamburger-line-2" class="absolute w-6 h-[2px] bg-gray-900 transition-all duration-300"></span>
+            <span id="hamburger-line-3" class="absolute w-6 h-[2px] bg-gray-900 transition-all duration-300 translate-y-2"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Background Overlay Hitam (Blur) -->
+      <div id="menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+
+      <!-- Mobile Menu Sidebar (Dari Kanan) -->
+      <div id="mobile-menu" class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col pt-24 px-6 md:hidden shadow-2xl border-l border-gray-100">
+        <ul class="flex flex-col gap-2 text-xl font-medium text-center">
+          <li><a href="#tentang" class="mobile-link block py-4 text-gray-800 border-b border-gray-100 hover:text-olive transition-colors">Tentang</a></li>
+          <li><a href="#sistem" class="mobile-link block py-4 text-gray-800 border-b border-gray-100 hover:text-olive transition-colors">Sistem</a></li>
+          <li><a href="#transparansi" class="mobile-link block py-4 text-gray-800 border-b border-gray-100 hover:text-olive transition-colors">Transparansi</a></li>
+          <li><a href="#kontak" class="mobile-link block py-4 text-gray-800 border-b border-gray-100 hover:text-olive transition-colors">Kontak</a></li>
+          <li class="mt-6">
+            <a href="#konsultasi" class="mobile-link block text-center bg-dark-brown text-white px-8 py-4 text-base font-semibold shadow-lg hover:bg-black transition-all"> Konsultasi Sekarang </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/gallery/2 (15).jpeg" alt="Rumah Modern" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl text-white">
+        <p class="text-sm md:text-base font-medium mb-6 opacity-90">Tidak semua orang ingin bergantung pada anak di masa tua.</p>
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-4 leading-[1.1]">
+          Di tanah 78m², Emak <br />
+          <span class="text-olive brightness-125">bangun kemandirian.</span>
+        </h1>
+        <p class="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed opacity-90">
+          Rumah tinggal yang nyaman, sekaligus 8 kamar kos aktif. <br class="hidden md:block" />
+          Bukan karena lahannya luas, <span class="font-bold text-white">tapi strateginya tepat.</span>
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. Problem Section -->
+    <section id="tentang" class="py-32 px-6 max-w-7xl mx-auto reveal">
+      <div class="text-center mb-20">
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">"Lahan saya kecil, bisa jadi apa?"</h2>
+        <div class="w-24 h-1 bg-olive mx-auto opacity-20"></div>
+      </div>
+
+      <!-- Questions Grid -->
+      <div class="grid md:grid-cols-3 gap-12 mb-24">
+        <div class="text-center space-y-4 group">
+          <div class="text-olive/20 font-bold text-4xl mb-2 group-hover:text-olive/40 transition-colors">01</div>
+          <p class="text-lg md:text-xl italic text-gray-500 leading-relaxed px-4">"Rumahnya nanti terlalu sempit nggak?"</p>
+        </div>
+        <div class="text-center space-y-4 group">
+          <div class="text-olive/20 font-bold text-4xl mb-2 group-hover:text-olive/40 transition-colors">02</div>
+          <p class="text-lg md:text-xl italic text-gray-500 leading-relaxed px-4">"Kalau dijadikan kos, saya masih bisa tinggal dengan nyaman nggak?"</p>
+        </div>
+        <div class="text-center space-y-4 group">
+          <div class="text-olive/20 font-bold text-4xl mb-2 group-hover:text-olive/40 transition-colors">03</div>
+          <p class="text-lg md:text-xl italic text-gray-500 leading-relaxed px-4">"Takutnya malah ribet ngurusnya..."</p>
+        </div>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Decorative line -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+        <div class="pt-20 pb-16 text-center">
+          <!-- Quote Icon -->
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white shadow-xl shadow-olive/5 mb-10 border border-gray-50">
+            <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3333 0V13.3333H0V0H13.3333ZM32 0V13.3333H18.6667V0H32Z" fill="#5F6F3A" fill-opacity="0.4" />
+            </svg>
+          </div>
+
+          <!-- Main Message Card -->
+          <div class="bg-white p-8 md:p-16 border border-gray-100 shadow-2xl shadow-olive/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-olive/5 -mr-16 -mt-16"></div>
+
+            <h3 class="text-2xl md:text-4xl font-bold mb-8 leading-tight relative z-10">
+              "Masalahnya bukan pada luas lahan, <br />
+              <span class="text-olive">tapi cara berpikirnya."</span>
+            </h3>
+
+            <div class="flex flex-col items-center gap-4 relative z-10">
+              <p class="text-gray-400 font-medium tracking-wide">Lahan kecil harus</p>
+              <div class="flex items-center gap-4">
+                <div class="h-px w-8 bg-olive/30"></div>
+                <span class="text-olive border-b-2 border-olive font-extrabold uppercase tracking-[0.2em] text-sm md:text-base pb-1"> Tumbuh Vertikal </span>
+                <div class="h-px w-8 bg-olive/30"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. System Section -->
+    <section id="sistem" class="bg-olive py-24 px-6 text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-4xl font-extrabold mb-4">Ini Sistem, Bukan Sulap</h2>
+          <p class="text-lg opacity-80">Bagaimana 78m² bisa muat 10 kamar?</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-24 reveal">
+          <!-- Feature 1 -->
+          <div class="bg-white p-8 text-gray-900 group hover:-translate-y-2 transition-transform flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="w-12 h-12 bg-olive/10 flex items-center justify-center mb-6 text-olive">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl mb-3">Pemisahan Zona</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">Privasi pemilik rumah terpisah total dari aktivitas kos.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="bg-white p-8 text-gray-900 group hover:-translate-y-2 transition-transform flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="w-12 h-12 bg-olive/10 flex items-center justify-center mb-6 text-olive">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <h4 class="font-bold text-xl mb-3">Stack Plumbing</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">Saluran air ditumpuk satu garis lurus untuk efisiensi biaya ekstrem.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="bg-white p-8 text-gray-900 group hover:-translate-y-2 transition-transform flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="w-12 h-12 bg-olive/10 flex items-center justify-center mb-6 text-olive">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707-.707" />
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl mb-3">Cahaya & Udara</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">Memangkas lorong tak berguna agar kamar lebih luas dan terang.</p>
+          </div>
+        </div>
+
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-4xl font-extrabold">Pembagian 3 Lantai</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 reveal">
+          <div class="bg-[#F2F4ED] p-8 text-gray-900 flex flex-col items-center md:items-start text-center md:text-left">
+            <h5 class="font-bold text-lg">Lantai 1</h5>
+            <p class="text-olive font-semibold mb-6">Rumah Tinggal</p>
+            <ul class="space-y-3 text-sm mb-8 text-left w-fit">
+              <li class="flex items-center gap-2"><span>•</span> 1 Kamar Utama & Mandi</li>
+              <li class="flex items-center gap-2"><span>•</span> Living Room & Dapur</li>
+              <li class="flex items-center gap-2"><span>•</span> Kolam Ikan & Carport</li>
+            </ul>
+            <p class="italic text-xs text-gray-400">Tetap punya privasi rumah sendiri.</p>
+          </div>
+          <div class="bg-[#F2F4ED] p-8 text-gray-900 flex flex-col items-center md:items-start text-center md:text-left">
+            <h5 class="font-bold text-lg">Lantai 2</h5>
+            <p class="text-olive font-semibold mb-6">Semi Privat</p>
+            <ul class="space-y-3 text-sm mb-8 text-left w-fit">
+              <li class="flex items-center gap-2"><span>•</span> 3 Kamar Kos Besar</li>
+              <li class="flex items-center gap-2"><span>•</span> 1 Private Bathroom</li>
+              <li class="flex items-center gap-2"><span>•</span> 1 Sharing Bathroom</li>
+              <li class="flex items-center gap-2"><span>•</span> Komunal Area</li>
+            </ul>
+            <p class="italic text-xs text-gray-400">Kamar mandi luar untuk efisiensi ruang.</p>
+          </div>
+          <div class="bg-[#F2F4ED] p-8 text-gray-900 border-2 border-white/50 flex flex-col items-center md:items-start text-center md:text-left">
+            <h5 class="font-bold text-lg">Lantai 3</h5>
+            <p class="text-olive font-semibold mb-6">Mesin Income</p>
+            <ul class="space-y-3 text-sm mb-8 text-left w-fit">
+              <li class="flex items-center gap-2"><span>•</span> 2 Kamar Besar</li>
+              <li class="flex items-center gap-2"><span>•</span> 3 Kamar Sedang</li>
+              <li class="flex items-center gap-2"><span>•</span> Dapur & Balkon Yoga</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Transparency Section -->
+    <section id="transparansi" class="bg-[#2C1E16] py-24 px-6 text-[#FAF8F5] reveal">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left mb-16 gap-6 w-full">
+          <div class="w-full">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Transparansi Penuh.</h2>
+            <p class="text-xl md:text-2xl font-medium text-[#D3C7B6]">Luasan Bersih dan Nyata</p>
+          </div>
+        </div>
+
+        <!-- Menggunakan CSS Columns untuk efek Masonry Layout -->
+        <!-- PERUBAHAN: Jarak Kanan-Kiri dikurangi menjadi gap-1 (mobile) dan gap-2 (desktop) -->
+        <div class="columns-2 md:columns-4 lg:columns-5 gap-1 md:gap-2 mb-24">
+          
+          <!-- Foto 1 -->
+          <!-- PERUBAHAN: Jarak Atas-Bawah pada tiap foto dikurangi menjadi mb-1 (mobile) dan mb-2 (desktop) -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 100ms;">
+            <img src="assets/gallery/2 (1).jpeg" alt="Foto 1" class="w-full h-auto object-cover opacity-70 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2C1E16]/90 via-transparent to-transparent flex items-end p-6 pointer-events-none"></div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 200ms;">
+            <img src="assets/gallery/2 (2).jpeg" alt="Foto 2" class="w-full h-auto object-cover opacity-70 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2C1E16]/90 via-transparent to-transparent flex items-end p-6 pointer-events-none"></div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 150ms;">
+            <img src="assets/gallery/2 (3).jpeg" alt="Foto 3" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 4 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 250ms;">
+            <img src="assets/gallery/2 (4).jpeg" alt="Foto 4" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 5 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 350ms;">
+            <img src="assets/gallery/2 (5).jpeg" alt="Foto 5" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 6 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 450ms;">
+            <img src="assets/gallery/2 (6).jpeg" alt="Foto 6" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 7 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 100ms;">
+            <img src="assets/gallery/2 (7).jpeg" alt="Foto 7" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 8 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 200ms;">
+            <img src="assets/gallery/2 (8).jpeg" alt="Foto 8" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 9 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 150ms;">
+            <img src="assets/gallery/2 (9).jpeg" alt="Foto 9" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 10 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 250ms;">
+            <img src="assets/gallery/2 (10).jpeg" alt="Foto 10" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 11 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 350ms;">
+            <img src="assets/gallery/2 (11).jpeg" alt="Foto 11" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 12 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 450ms;">
+            <img src="assets/gallery/2 (12).jpeg" alt="Foto 12" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 13 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 100ms;">
+            <img src="assets/gallery/2 (13).jpeg" alt="Foto 13" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 14 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 200ms;">
+            <img src="assets/gallery/2 (14).jpeg" alt="Foto 14" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 15 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 150ms;">
+            <img src="assets/gallery/2 (15).jpeg" alt="Foto 15" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 16 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 250ms;">
+            <img src="assets/gallery/2 (16).jpeg" alt="Foto 16" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 17 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 350ms;">
+            <img src="assets/gallery/2 (17).jpeg" alt="Foto 17" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 18 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 450ms;">
+            <img src="assets/gallery/2 (18).jpeg" alt="Foto 18" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 19 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 100ms;">
+            <img src="assets/gallery/2 (19).jpeg" alt="Foto 19" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 20 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 200ms;">
+            <img src="assets/gallery/2 (20).jpeg" alt="Foto 20" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 21 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 150ms;">
+            <img src="assets/gallery/2 (21).jpeg" alt="Foto 21" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+          <!-- Foto 22 -->
+          <div class="bg-[#3E2E21] break-inside-avoid relative group overflow-hidden reveal mb-1 md:mb-2" style="transition-delay: 250ms;">
+            <img src="assets/gallery/2 (22).jpeg" alt="Foto 22" class="w-full h-auto object-cover opacity-60 group-hover:opacity-100 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+
+        </div>
+
+        <div class="text-center text-gray-900 bg-[#F9F8F3] -mx-6 py-24 px-6">
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Rumah ini assets bukan beban</h2>
+          <p class="text-lg opacity-60 mb-16">Denah tata ruang yang memaksimalkan setiap meter persegi.</p>
+
+          <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <img src="assets/gamker/1.jpeg" alt="Interior 1" class="h-96 w-full object-cover shadow-lg" />
+            <img src="assets/gamker/2.jpeg" alt="Interior 2" class="h-96 w-full object-cover shadow-lg" />
+            <img src="assets/gamker/3.jpeg" alt="Interior 3" class="h-96 w-full object-cover shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Process & Footer -->
+    <section id="kontak" class="bg-olive py-24 px-6 text-white text-center">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold mb-12 reveal">5 Fase Pembangunan Terukur</h2>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-32 reveal">
+          <span class="bg-white/10 px-6 py-3 text-sm font-medium border border-white/20">Survey Tapak</span>
+          <span class="bg-white/10 px-6 py-3 text-sm font-medium border border-white/20">Analisa Zoning</span>
+          <span class="bg-white/10 px-6 py-3 text-sm font-medium border border-white/20">Struktur 3 Lantai</span>
+          <span class="bg-white/10 px-6 py-3 text-sm font-medium border border-white/20">RAB Presisi</span>
+          <div class="w-full mt-4">
+            <span class="bg-white text-olive px-8 py-3 text-sm font-bold shadow-lg">Siap Bangun</span>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto py-24 text-gray-900 bg-white shadow-2xl reveal">
+          <p class="text-xl md:text-2xl italic font-medium text-gray-500 mb-12 px-8">
+            "Rumah bukan sekadar tempat tinggal, tapi <br />
+            Rumah adalah cara untuk tetap hidup dengan layak."
+          </p>
+
+          <h3 class="text-3xl md:text-5xl font-extrabold mb-6 px-8 leading-tight">
+            Kalau lahan kecil bisa produktif, <br />
+            <span class="text-olive">bagaimana dengan lahan Anda?</span>
+          </h3>
+          <p class="opacity-60 mb-12">Mari kita diskusi dan temukan potensinya.</p>
+
+          <a href="#konsultasi" id="konsultasi" class="inline-flex bg-dark-brown text-white px-10 py-5 text-lg font-bold hover:scale-105 transition-all items-center gap-4 mx-auto group">
+            Yuk konsultasikan
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-gray-400 text-xs tracking-widest bg-white">LANGITLANGIT.ID © 2026</footer>
+
+    <script>
+      // 1. Simple scroll animation script
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+      window.addEventListener("scroll", reveal);
+      reveal(); // Initial call
+
+      // 2. Script untuk Mobile Menu Navbar Sidebar (Dari Samping Kanan)
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuOverlay = document.getElementById("menu-overlay");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      
+      const line1 = document.getElementById("hamburger-line-1");
+      const line2 = document.getElementById("hamburger-line-2");
+      const line3 = document.getElementById("hamburger-line-3");
+      
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          // Slide in dari samping kanan
+          mobileMenu.classList.remove("translate-x-full");
+          mobileMenu.classList.add("translate-x-0");
+          
+          // Tampilkan Overlay Gelap
+          menuOverlay.classList.remove("opacity-0", "pointer-events-none");
+          menuOverlay.classList.add("opacity-100", "pointer-events-auto");
+          
+          // Animasi Hamburger ke 'X'
+          line1.classList.add("translate-y-0", "rotate-45");
+          line1.classList.remove("-translate-y-2");
+          line2.classList.add("opacity-0");
+          line3.classList.add("translate-y-0", "-rotate-45");
+          line3.classList.remove("translate-y-2");
+          
+          document.body.style.overflow = "hidden"; // Cegah scroll di body
+        } else {
+          // Slide out ke kanan
+          mobileMenu.classList.add("translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+          
+          // Sembunyikan Overlay
+          menuOverlay.classList.add("opacity-0", "pointer-events-none");
+          menuOverlay.classList.remove("opacity-100", "pointer-events-auto");
+          
+          // Animasi 'X' ke Hamburger
+          line1.classList.remove("translate-y-0", "rotate-45");
+          line1.classList.add("-translate-y-2");
+          line2.classList.remove("opacity-0");
+          line3.classList.remove("translate-y-0", "-rotate-45");
+          line3.classList.add("translate-y-2");
+          
+          document.body.style.overflow = "auto"; // Kembalikan scroll
+        }
+      }
+
+      // Tutup/buka pakai tombol hamburger
+      mobileBtn.addEventListener("click", toggleMenu);
+      
+      // Tutup otomatis kalau overlay hitam di-klik
+      menuOverlay.addEventListener("click", toggleMenu);
+
+      // Tutup menu otomatis jika salah satu link diklik
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) toggleMenu();
+        });
+      });
+    </script>
+  </body>
+</html>
