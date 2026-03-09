@@ -106,9 +106,9 @@
           >
         </a>
 
-        <!-- Desktop Menu -->
+        <!-- Desktop Menu (Diubah dari md:flex ke lg:flex agar tidak nabrak di tablet) -->
         <ul
-          class="hidden md:flex items-center gap-10 font-semibold text-sm tracking-wide"
+          class="hidden lg:flex items-center gap-10 font-semibold text-sm tracking-wide"
         >
           <li>
             <a
@@ -156,10 +156,10 @@
           </li>
         </ul>
 
-        <!-- Desktop CTA -->
+        <!-- Desktop CTA (Diubah dari md:inline-flex ke lg:inline-flex) -->
         <a
           href="#kontak"
-          class="hidden md:inline-flex bg-brown text-white px-6 py-2.5 text-sm font-bold hover:bg-black transition-all duration-300 items-center gap-2 group rounded-md"
+          class="hidden lg:inline-flex bg-brown text-white px-6 py-2.5 text-sm font-bold hover:bg-black transition-all duration-300 items-center gap-2 group rounded-md"
         >
           Konsultasi Sekarang
           <svg
@@ -178,10 +178,10 @@
           </svg>
         </a>
 
-        <!-- Mobile Menu Button (Hamburger) -->
+        <!-- Mobile Menu Button (Hamburger) (Diubah dari md:hidden ke lg:hidden) -->
         <button
           id="mobile-menu-btn"
-          class="md:hidden relative w-8 h-8 flex items-center justify-center text-brown focus:outline-none group rounded-md"
+          class="lg:hidden relative w-8 h-8 flex items-center justify-center text-brown focus:outline-none group rounded-md"
         >
           <div class="relative w-6 h-4">
             <span
@@ -201,14 +201,14 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu Overlay & Sidebar (Dipisah dari nav agar z-index HP tidak rusak) -->
+    <!-- Mobile Menu Overlay & Sidebar (Diubah dari md:hidden ke lg:hidden) -->
     <div
       id="menu-overlay"
-      class="fixed inset-0 bg-brown-dark/60 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+      class="fixed inset-0 bg-brown-dark/60 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
     ></div>
     <div
       id="mobile-menu"
-      class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-[100] transform translate-x-full transition-transform duration-500 ease-ninja flex flex-col pt-28 px-8 md:hidden shadow-2xl border-l border-gray-100"
+      class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-[100] transform translate-x-full transition-transform duration-500 ease-ninja flex flex-col pt-28 px-8 lg:hidden shadow-2xl border-l border-gray-100"
     >
       <ul class="flex flex-col gap-2 text-xl font-bold">
         <li>
