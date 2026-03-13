@@ -106,7 +106,7 @@
           >
         </a>
 
-        <!-- Desktop Menu (Diubah dari md:flex ke lg:flex agar tidak nabrak di tablet) -->
+        <!-- Desktop Menu -->
         <ul
           class="hidden lg:flex items-center gap-10 font-semibold text-sm tracking-wide"
         >
@@ -156,7 +156,7 @@
           </li>
         </ul>
 
-        <!-- Desktop CTA (Diubah dari md:inline-flex ke lg:inline-flex) -->
+        <!-- Desktop CTA -->
         <a
           href="#kontak"
           class="hidden lg:inline-flex bg-brown text-white px-6 py-2.5 text-sm font-bold hover:bg-black transition-all duration-300 items-center gap-2 group rounded-md"
@@ -178,7 +178,7 @@
           </svg>
         </a>
 
-        <!-- Mobile Menu Button (Hamburger) (Diubah dari md:hidden ke lg:hidden) -->
+        <!-- Mobile Menu Button (Hamburger) -->
         <button
           id="mobile-menu-btn"
           class="lg:hidden relative w-8 h-8 flex items-center justify-center text-brown focus:outline-none group rounded-md"
@@ -201,7 +201,7 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu Overlay & Sidebar (Diubah dari md:hidden ke lg:hidden) -->
+    <!-- Mobile Menu Overlay & Sidebar -->
     <div
       id="menu-overlay"
       class="fixed inset-0 bg-brown-dark/60 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
@@ -250,7 +250,7 @@
       </ul>
     </div>
 
-    <!-- 1. Hero Section (BG: Brown-Dark) -->
+    <!-- 1. Hero Section -->
     <header
       class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden bg-brown-dark"
     >
@@ -308,13 +308,13 @@
       </div>
     </header>
 
-    <!-- 2. Problem Section (BG: Beige) -->
+    <!-- 2. Problem Section -->
     <section
       id="tentang"
       class="py-24 md:py-32 px-6 max-w-7xl mx-auto bg-beige"
     >
       <div class="grid lg:grid-cols-12 gap-10 md:gap-16 items-start">
-        <!-- Kolom Kiri: Statement Utama & Quote Card (Sticky) -->
+        <!-- Kolom Kiri -->
         <div
           class="lg:col-span-5 lg:sticky lg:top-32 reveal"
           style="transition-delay: 0ms"
@@ -329,7 +329,6 @@
             <div class="w-16 h-1 bg-olive rounded-md"></div>
           </div>
 
-          <!-- Quote Card (Dark Brown) -->
           <div
             class="bg-brown text-white p-8 md:p-10 rounded-md shadow-[0_20px_40px_-15px_rgba(45,36,30,0.4)]"
           >
@@ -362,9 +361,8 @@
           </div>
         </div>
 
-        <!-- Kolom Kanan: The Doubts (White Cards List) -->
+        <!-- Kolom Kanan -->
         <div class="lg:col-span-7 flex flex-col gap-5 mt-4 lg:mt-0">
-          <!-- Card 01 -->
           <div
             class="bg-white border border-gray-100 p-6 md:p-10 rounded-md shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-6 md:gap-8 group reveal"
             style="transition-delay: 150ms"
@@ -377,8 +375,6 @@
               "Rumahnya nanti terlalu sempit nggak?"
             </p>
           </div>
-
-          <!-- Card 02 -->
           <div
             class="bg-white border border-gray-100 p-6 md:p-10 rounded-md shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-6 md:gap-8 group reveal"
             style="transition-delay: 300ms"
@@ -392,8 +388,6 @@
               nggak?"
             </p>
           </div>
-
-          <!-- Card 03 -->
           <div
             class="bg-white border border-gray-100 p-6 md:p-10 rounded-md shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-6 md:gap-8 group reveal"
             style="transition-delay: 450ms"
@@ -410,12 +404,11 @@
       </div>
     </section>
 
-    <!-- 3. Lantai Section (SECTION UTAMA - BG: Olive) -->
+    <!-- 3. Lantai Section (REDESIGN - Zoomed Image Strategy) -->
     <section
       id="lantai"
       class="bg-olive py-24 md:py-32 px-6 text-white relative"
     >
-      <!-- Ornamen Tipis Background -->
       <div
         class="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:40px_40px]"
       ></div>
@@ -438,133 +431,201 @@
             class="text-lg md:text-xl text-beige-light font-medium mb-8 opacity-90"
           >
             Denah arsitektural yang memisahkan area privat dan komersial dengan
-            batas yang tegas.
+            batas yang tegas, mengubah hunian menjadi aset berharga.
           </p>
-          <div class="w-16 h-1 bg-olive-light rounded-md"></div>
+          <div class="w-16 h-1 bg-olive-light rounded-md mb-12"></div>
         </div>
 
-        <!-- Kolom Kanan: Card List Bertumpuk (Vertikal) -->
-        <div class="lg:col-span-7 flex flex-col gap-6">
-          <!-- Lantai 1 (Paling Atas) -->
+        <!-- Kolom Kanan: Card List Bertumpuk dengan Gambar (Zoomed In) -->
+        <div class="lg:col-span-7 flex flex-col gap-10">
+          <!-- Lantai 1 Card -->
           <div
-            class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 md:p-10 rounded-md shadow-xl reveal"
-            style="transition-delay: 450ms"
-          >
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/20 pb-4"
-            >
-              <h5 class="text-3xl font-extrabold text-white">Lantai 1</h5>
-              <span
-                class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-transparent border border-white/40 text-white px-3 py-1.5 rounded-md uppercase tracking-widest"
-                >Rumah Tinggal</span
-              >
-            </div>
-            <ul
-              class="space-y-4 text-sm md:text-base font-medium text-beige-light mb-6"
-            >
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
-                1 Kamar Utama & Mandi
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
-                Living Room & Dapur
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
-                Kolam Ikan & Carport
-              </li>
-            </ul>
-            <p
-              class="text-xs text-white/50 uppercase tracking-widest bg-black/10 p-3 rounded-md border border-white/5 inline-block"
-            >
-              Info: Tetap punya privasi rumah sendiri.
-            </p>
-          </div>
-
-          <!-- Lantai 2 (Tengah) -->
-          <div
-            class="bg-olive-dark/80 backdrop-blur-sm border border-white/10 p-6 md:p-10 rounded-md shadow-xl reveal"
-            style="transition-delay: 300ms"
-          >
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/10 pb-4"
-            >
-              <h5 class="text-3xl font-extrabold text-white">Lantai 2</h5>
-              <span
-                class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-olive-light text-brown px-3 py-1.5 rounded-md uppercase tracking-widest"
-                >Semi Privat</span
-              >
-            </div>
-            <ul
-              class="space-y-4 text-sm md:text-base font-medium text-beige-light mb-6"
-            >
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
-                3 Kamar Kos Besar
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
-                1 Private Bathroom
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
-                1 Sharing Bathroom
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
-                Komunal Area
-              </li>
-            </ul>
-            <p
-              class="text-xs text-white/50 uppercase tracking-widest bg-black/20 p-3 rounded-md border border-white/5 inline-block"
-            >
-              Info: Kamar mandi luar untuk efisiensi ruang.
-            </p>
-          </div>
-
-          <!-- Lantai 3 (Dasar) -->
-          <div
-            class="bg-brown-dark/90 backdrop-blur-sm border border-white/10 p-6 md:p-10 rounded-md shadow-xl reveal"
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden shadow-2xl reveal group flex flex-col"
             style="transition-delay: 150ms"
           >
+            <!-- Blueprint Image Area (Scaled Up for Zoom) -->
             <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/10 pb-4"
+              class="w-full bg-white p-6 relative overflow-hidden border-b border-white/10 flex items-center justify-center"
             >
-              <h5 class="text-3xl font-extrabold text-white">Lantai 3</h5>
               <span
-                class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-white text-brown px-3 py-1.5 rounded-md uppercase tracking-widest"
-                >Optimal : Mesin Income</span
+                class="absolute top-4 right-4 bg-brown text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-widest z-10 shadow-sm pointer-events-none"
+                >Denah L1</span
               >
+              <!-- Added scale-125 and md:scale-[1.35] to effectively crop the white space and zoom in -->
+              <img
+                src="assets/gamker/1.jpeg"
+                class="w-full h-[400px] md:h-[600px] object-contain scale-[1.10] md:scale-[1.05] md:group-hover:scale-[1.06] transition-transform duration-700 ease-ninja"
+                alt="Layout Lantai 1"
+                loading="lazy"
+              />
             </div>
-            <ul
-              class="space-y-4 text-sm md:text-base font-medium text-beige-light"
+            <!-- Text Content -->
+            <div class="p-6 md:p-10">
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/20 pb-4"
+              >
+                <h5 class="text-3xl font-extrabold text-white">Lantai 1</h5>
+                <span
+                  class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-transparent border border-white/40 text-white px-3 py-1.5 rounded-md uppercase tracking-widest"
+                  >Rumah Tinggal</span
+                >
+              </div>
+              <ul
+                class="space-y-4 text-sm md:text-base font-medium text-beige-light mb-6"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
+                  1 Kamar Utama & Mandi Dalam
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
+                  Living Room & Area Makan
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
+                  Dapur Utama & Taman Mini
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-white/40 rounded-sm"></div>
+                  Carport & Akses Terpisah
+                </li>
+              </ul>
+              <p
+                class="text-xs text-white/50 uppercase tracking-widest bg-black/10 p-3 rounded-md border border-white/5 inline-block"
+              >
+                Info: Tetap punya privasi rumah sendiri.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lantai 2 Card -->
+          <div
+            class="bg-olive-dark/80 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl reveal group flex flex-col"
+            style="transition-delay: 300ms"
+          >
+            <!-- Blueprint Image Area -->
+            <div
+              class="w-full bg-white p-6 relative overflow-hidden border-b border-white/10 flex items-center justify-center"
             >
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
-                2 Kamar Besar
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
-                3 Kamar Sedang
-              </li>
-              <li class="flex items-center gap-3">
-                <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
-                Dapur & Balkon Yoga
-              </li>
-            </ul>
+              <span
+                class="absolute top-4 right-4 bg-olive-dark text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-widest z-10 shadow-sm pointer-events-none"
+                >Denah L2</span
+              >
+              <!-- Zoom Applied -->
+              <img
+                src="assets/gamker/2.jpeg"
+                class="w-full h-[400px] md:h-[600px] object-contain scale-[1.10] md:scale-[1.05] md:group-hover:scale-[1.06] transition-transform duration-700 ease-ninja"
+                alt="Layout Lantai 2"
+                loading="lazy"
+              />
+            </div>
+            <!-- Text Content -->
+            <div class="p-6 md:p-10">
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/10 pb-4"
+              >
+                <h5 class="text-3xl font-extrabold text-white">Lantai 2</h5>
+                <span
+                  class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-olive-light text-brown px-3 py-1.5 rounded-md uppercase tracking-widest"
+                  >Semi Privat</span
+                >
+              </div>
+              <ul
+                class="space-y-4 text-sm md:text-base font-medium text-beige-light mb-6"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
+                  3 Kamar Kos Besar (Master)
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
+                  1 Private Bathroom
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
+                  1 Sharing Bathroom
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
+                  Working Area / Komunal
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light/60 rounded-sm"></div>
+                  Bukaan Void Sirkulasi Udara
+                </li>
+              </ul>
+              <p
+                class="text-xs text-white/50 uppercase tracking-widest bg-black/20 p-3 rounded-md border border-white/5 inline-block"
+              >
+                Info: Efisiensi ruang plumbing yang optimal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lantai 3 Card -->
+          <div
+            class="bg-brown-dark/90 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl reveal group flex flex-col"
+            style="transition-delay: 450ms"
+          >
+            <!-- Blueprint Image Area -->
+            <div
+              class="w-full bg-white p-6 relative overflow-hidden border-b border-white/10 flex items-center justify-center"
+            >
+              <span
+                class="absolute top-4 right-4 bg-black text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-widest z-10 shadow-sm pointer-events-none"
+                >Denah L3</span
+              >
+              <!-- Zoom Applied -->
+              <img
+                src="assets/gamker/3.jpeg"
+                class="w-full h-[400px] md:h-[600px] object-contain scale-[1.10] md:scale-[1.05] md:group-hover:scale-[1.06] transition-transform duration-700 ease-ninja"
+                alt="Layout Lantai 3"
+                loading="lazy"
+              />
+            </div>
+            <!-- Text Content -->
+            <div class="p-6 md:p-10">
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/10 pb-4"
+              >
+                <h5 class="text-3xl font-extrabold text-white">Lantai 3</h5>
+                <span
+                  class="inline-block mt-2 sm:mt-0 text-[10px] font-bold bg-white text-brown px-3 py-1.5 rounded-md uppercase tracking-widest"
+                  >Optimal : Mesin Income</span
+                >
+              </div>
+              <ul
+                class="space-y-4 text-sm md:text-base font-medium text-beige-light"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
+                  2 Kamar Kos Besar
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
+                  3 Kamar Kos Sedang
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
+                  Dapur Bersama
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-2 h-2 bg-olive-light rounded-sm"></div>
+                  Balkon Terbuka / Area Santai
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. Sistem Section (SECTION SEKUNDER - BG: White) -->
+    <!-- 4. Sistem Section -->
     <section
       id="sistem"
       class="bg-white py-24 md:py-32 px-6 text-brown border-y border-gray-100"
     >
       <div class="max-w-6xl mx-auto">
-        <!-- Judul Bagian Sistem -->
         <div
           class="text-center mb-20 md:mb-24 reveal"
           style="transition-delay: 0ms"
@@ -579,9 +640,7 @@
           </p>
         </div>
 
-        <!-- 3 Pilar Sistem (Minimalist typography style, No Cards) -->
         <div class="grid md:grid-cols-3 gap-12 md:gap-16">
-          <!-- Fitur 1 -->
           <div class="reveal group" style="transition-delay: 150ms">
             <div
               class="w-14 h-14 rounded-md bg-beige flex items-center justify-center mb-6 text-olive border border-gray-100 group-hover:bg-olive group-hover:text-white transition-colors duration-300"
@@ -610,7 +669,6 @@
             </p>
           </div>
 
-          <!-- Fitur 2 -->
           <div class="reveal group" style="transition-delay: 300ms">
             <div
               class="w-14 h-14 rounded-md bg-beige flex items-center justify-center mb-6 text-olive border border-gray-100 group-hover:bg-olive group-hover:text-white transition-colors duration-300"
@@ -639,7 +697,6 @@
             </p>
           </div>
 
-          <!-- Fitur 3 -->
           <div class="reveal group" style="transition-delay: 450ms">
             <div
               class="w-14 h-14 rounded-md bg-beige flex items-center justify-center mb-6 text-olive border border-gray-100 group-hover:bg-olive group-hover:text-white transition-colors duration-300"
@@ -671,7 +728,7 @@
       </div>
     </section>
 
-    <!-- 5. Transparansi Section (BG: Brown-mid) -->
+    <!-- 5. Transparansi Section -->
     <section
       id="transparansi"
       class="bg-brown-mid py-24 md:py-32 px-6 text-beige-light border-b border-brown-dark"
@@ -698,7 +755,6 @@
 
         <!-- Masonry / Pinterest Layout Gallery -->
         <div class="relative w-full">
-          <!-- Gallery Wrapper (Height Limited Initially) -->
           <div
             id="gallery-wrapper"
             class="relative overflow-hidden transition-all duration-1000 ease-in-out max-h-[600px] md:max-h-[800px]"
@@ -706,7 +762,6 @@
             <div
               class="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4"
             >
-              <!-- Baris Gambar (menggunakan delay bergantian agar tidak muncul barengan semua) -->
               <div
                 class="break-inside-avoid rounded-md overflow-hidden bg-brown-dark reveal mb-3 md:mb-4"
                 style="transition-delay: 100ms"
@@ -1085,171 +1140,178 @@
       </div>
     </section>
 
-    <!-- 6. Asset Section (BG: Beige) -->
-    <section class="bg-beige text-brown py-24 md:py-32 px-6">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="text-center mb-12 md:mb-16 reveal"
-          style="transition-delay: 0ms"
-        >
-          <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
-            Rumah ini assets bukan beban
-          </h2>
-          <p
-            class="text-base md:text-xl text-gray-500 font-medium max-w-2xl mx-auto"
-          >
-            Denah tata ruang yang memaksimalkan setiap meter persegi.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-4 md:gap-6">
-          <div
-            class="overflow-hidden group reveal"
-            style="transition-delay: 100ms"
-          >
-            <img
-              src="assets/gamker/1.jpeg"
-              loading="lazy"
-              alt="Interior 1"
-              class="w-full h-[90%] object-cover object-bottom group-hover:scale-105 transition-transform duration-700 ease-ninja shadow-md rounded-md"
-            />
-          </div>
-          <div
-            class="rounded-md overflow-hidden group reveal"
-            style="transition-delay: 200ms"
-          >
-            <img
-              src="assets/gamker/2.jpeg"
-              loading="lazy"
-              alt="Interior 2"
-              class="w-full h-[90%] object-cover object-bottom group-hover:scale-105 transition-transform duration-700 ease-ninja shadow-md rounded-md"
-            />
-          </div>
-          <div
-            class="rounded-md overflow-hidden group reveal"
-            style="transition-delay: 300ms"
-          >
-            <img
-              src="assets/gamker/3.jpeg"
-              loading="lazy"
-              alt="Interior 3"
-              class="w-full h-[90%] object-cover object-bottom group-hover:scale-105 transition-transform duration-700 ease-ninja shadow-md rounded-md"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Process & Footer (BG: Brown-dark) -->
+    <!-- 6. Process Roadmap & Footer -->
     <section
       id="kontak"
-      class="bg-brown-dark py-24 md:py-32 px-6 text-white relative"
+      class="bg-brown-dark py-24 md:py-32 px-6 text-white relative overflow-hidden"
     >
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-4xl mx-auto">
+        <!-- Judul Roadmap -->
         <div
-          class="text-center mb-16 md:mb-20 reveal"
+          class="text-center mb-16 md:mb-24 reveal"
           style="transition-delay: 0ms"
         >
           <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
             5 Fase Perencanaan Terukur
           </h2>
+          <p class="text-beige-dark text-lg mt-4 max-w-xl mx-auto">
+            Langkah demi langkah, dari lahan kosong hingga menjadi aset
+            produktif yang siap dihuni.
+          </p>
         </div>
 
-        <!-- Sleek Process Flow (Linear Step Design) -->
-        <div class="relative mb-24 md:mb-32">
-          <!-- Background Line for Desktop -->
+        <!-- Timeline / Roadmap Container -->
+        <div class="relative w-full mt-10 mb-24 md:mb-32">
+          <!-- Central Vertical Line -->
+          <!-- Desktop: Tengah. Mobile: Kiri -->
           <div
-            class="hidden md:block absolute top-6 left-[10%] w-[80%] h-px bg-white/10 rounded-md reveal"
-            style="transition-delay: 50ms"
+            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-olive/80 via-white/10 to-transparent md:-translate-x-1/2 rounded-full"
           ></div>
 
+          <!-- Step 1 (Kiri di Desktop) -->
           <div
-            class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 relative z-10"
+            class="relative flex items-center md:justify-between mb-16 md:mb-20 reveal group"
+            style="transition-delay: 100ms"
           >
-            <!-- Step 1 -->
+            <!-- Node Number -->
             <div
-              class="flex flex-col items-center text-center group reveal"
-              style="transition-delay: 100ms"
+              class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-brown-dark border-[3px] border-olive flex items-center justify-center font-extrabold text-xl text-white z-10 group-hover:bg-olive group-hover:scale-110 shadow-[0_0_15px_rgba(95,111,58,0.4)] transition-all duration-300"
             >
-              <div
-                class="w-12 h-12 rounded-md bg-brown-dark border border-white/20 flex items-center justify-center font-bold text-olive-light mb-3 md:mb-4 group-hover:bg-white group-hover:text-brown transition-colors"
-              >
-                1
-              </div>
-              <span
-                class="text-xs md:text-sm font-bold tracking-widest uppercase text-beige-dark"
-                >Survey Tapak</span
-              >
+              1
             </div>
-            <!-- Step 2 -->
+            <!-- Kiri (Isi) -->
             <div
-              class="flex flex-col items-center text-center group reveal"
-              style="transition-delay: 200ms"
+              class="w-full pl-[80px] md:pl-0 md:w-[calc(50%-50px)] md:text-right"
             >
-              <div
-                class="w-12 h-12 rounded-md bg-brown-dark border border-white/20 flex items-center justify-center font-bold text-olive-light mb-3 md:mb-4 group-hover:bg-white group-hover:text-brown transition-colors"
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-2">
+                Survey Tapak
+              </h4>
+              <p
+                class="text-sm md:text-base text-beige-dark opacity-90 leading-relaxed"
               >
-                2
-              </div>
-              <span
-                class="text-xs md:text-sm font-bold tracking-widest uppercase text-beige-dark"
-                >Analisa Zoning</span
-              >
+                Pengukuran batas lahan aktual secara presisi dan observasi
+                potensi lingkungan sekitar.
+              </p>
             </div>
-            <!-- Step 3 -->
+            <!-- Kanan (Kosong untuk Desktop spacing) -->
+            <div class="hidden md:block md:w-[calc(50%-50px)]"></div>
+          </div>
+
+          <!-- Step 2 (Kanan di Desktop) -->
+          <div
+            class="relative flex items-center md:justify-between mb-16 md:mb-20 reveal group"
+            style="transition-delay: 200ms"
+          >
             <div
-              class="flex flex-col items-center text-center group reveal"
-              style="transition-delay: 300ms"
+              class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-brown-dark border-[3px] border-olive flex items-center justify-center font-extrabold text-xl text-white z-10 group-hover:bg-olive group-hover:scale-110 shadow-[0_0_15px_rgba(95,111,58,0.4)] transition-all duration-300"
             >
-              <div
-                class="w-12 h-12 rounded-md bg-brown-dark border border-white/20 flex items-center justify-center font-bold text-olive-light mb-3 md:mb-4 group-hover:bg-white group-hover:text-brown transition-colors"
-              >
-                3
-              </div>
-              <span
-                class="text-xs md:text-sm font-bold tracking-widest uppercase text-beige-dark"
-                >Struktur 3 Lantai</span
-              >
+              2
             </div>
-            <!-- Step 4 -->
+            <div class="hidden md:block md:w-[calc(50%-50px)]"></div>
+            <!-- Kanan (Isi) -->
             <div
-              class="flex flex-col items-center text-center group reveal"
-              style="transition-delay: 400ms"
+              class="w-full pl-[80px] md:pl-0 md:w-[calc(50%-50px)] md:text-left"
             >
-              <div
-                class="w-12 h-12 rounded-md bg-brown-dark border border-white/20 flex items-center justify-center font-bold text-olive-light mb-3 md:mb-4 group-hover:bg-white group-hover:text-brown transition-colors"
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-2">
+                Analisa Zoning
+              </h4>
+              <p
+                class="text-sm md:text-base text-beige-dark opacity-90 leading-relaxed"
               >
-                4
-              </div>
-              <span
-                class="text-xs md:text-sm font-bold tracking-widest uppercase text-beige-dark"
-                >RAB Presisi</span
-              >
+                Pemisahan absolut antara area privat pemilik dan sirkulasi
+                komersial anak kos.
+              </p>
             </div>
-            <!-- Step 5 -->
+          </div>
+
+          <!-- Step 3 (Kiri di Desktop) -->
+          <div
+            class="relative flex items-center md:justify-between mb-16 md:mb-20 reveal group"
+            style="transition-delay: 300ms"
+          >
             <div
-              class="flex flex-col items-center text-center group reveal"
-              style="transition-delay: 500ms"
+              class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-brown-dark border-[3px] border-olive flex items-center justify-center font-extrabold text-xl text-white z-10 group-hover:bg-olive group-hover:scale-110 shadow-[0_0_15px_rgba(95,111,58,0.4)] transition-all duration-300"
             >
-              <div
-                class="w-12 h-12 rounded-md bg-olive border border-olive flex items-center justify-center font-bold text-white mb-3 md:mb-4 shadow-lg shadow-olive/20"
-              >
-                5
-              </div>
-              <span
-                class="text-xs md:text-sm font-black tracking-widest uppercase text-white"
-                >Siap Bangun</span
-              >
+              3
             </div>
+            <!-- Kiri (Isi) -->
+            <div
+              class="w-full pl-[80px] md:pl-0 md:w-[calc(50%-50px)] md:text-right"
+            >
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-2">
+                Struktur 3 Lantai
+              </h4>
+              <p
+                class="text-sm md:text-base text-beige-dark opacity-90 leading-relaxed"
+              >
+                Perancangan fondasi kuat, denah vertikal yang memangkas lorong,
+                dan optimalisasi bukaan udara.
+              </p>
+            </div>
+            <div class="hidden md:block md:w-[calc(50%-50px)]"></div>
+          </div>
+
+          <!-- Step 4 (Kanan di Desktop) -->
+          <div
+            class="relative flex items-center md:justify-between mb-16 md:mb-20 reveal group"
+            style="transition-delay: 400ms"
+          >
+            <div
+              class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-brown-dark border-[3px] border-olive flex items-center justify-center font-extrabold text-xl text-white z-10 group-hover:bg-olive group-hover:scale-110 shadow-[0_0_15px_rgba(95,111,58,0.4)] transition-all duration-300"
+            >
+              4
+            </div>
+            <div class="hidden md:block md:w-[calc(50%-50px)]"></div>
+            <!-- Kanan (Isi) -->
+            <div
+              class="w-full pl-[80px] md:pl-0 md:w-[calc(50%-50px)] md:text-left"
+            >
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-2">
+                RAB Presisi
+              </h4>
+              <p
+                class="text-sm md:text-base text-beige-dark opacity-90 leading-relaxed"
+              >
+                Kalkulasi cerdas dengan teknik "Stack Plumbing" untuk menghemat
+                material hingga 30%.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 (Akhir - Tengah di Desktop) -->
+          <div
+            class="relative flex items-center md:justify-between reveal group"
+            style="transition-delay: 500ms"
+          >
+            <!-- Final Node (Bigger) -->
+            <div
+              class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-olive border-[4px] border-brown-dark flex items-center justify-center font-black text-2xl text-white z-10 shadow-[0_0_25px_rgba(95,111,58,0.8)] group-hover:scale-110 group-hover:bg-white group-hover:text-olive transition-all duration-300"
+            >
+              5
+            </div>
+            <!-- Kiri (Isi - Difokuskan ke kanan agar seimbang di Desktop) -->
+            <div
+              class="w-full pl-[80px] md:pl-0 md:w-[calc(50%-60px)] md:text-right"
+            >
+              <h4 class="text-2xl md:text-3xl font-black text-olive-light mb-2">
+                Siap Bangun
+              </h4>
+              <p
+                class="text-sm md:text-base text-beige-light opacity-100 leading-relaxed"
+              >
+                Penyerahan cetak biru lengkap. Perencanaan di atas kertas siap
+                dieksekusi menjadi bangunan nyata.
+              </p>
+            </div>
+            <div class="hidden md:block md:w-[calc(50%-60px)]"></div>
           </div>
         </div>
 
         <!-- Call to Action Card -->
         <div
-          class="bg-white text-brown rounded-md p-8 md:p-20 text-center shadow-2xl reveal border border-gray-100 max-w-4xl mx-auto relative overflow-hidden"
+          class="bg-white text-brown rounded-md p-8 md:p-20 text-center shadow-2xl reveal border border-gray-100 relative overflow-hidden"
           style="transition-delay: 600ms"
         >
-          <!-- Subtle corner accents -->
           <div
             class="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 border-t-4 border-r-4 border-olive/10 mt-4 mr-4 md:mt-6 md:mr-6 rounded-md"
           ></div>
@@ -1330,7 +1392,7 @@
         observer.observe(el);
       });
 
-      // Mobile Menu Logic (Diperbarui untuk bebas BUG Z-Index)
+      // Mobile Menu Logic
       const mobileBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
       const menuOverlay = document.getElementById("menu-overlay");
@@ -1346,32 +1408,24 @@
         isMenuOpen = !isMenuOpen;
 
         if (isMenuOpen) {
-          // Slide in menu
           mobileMenu.classList.remove("translate-x-full");
-          // Fade in overlay
           menuOverlay.classList.remove("opacity-0", "pointer-events-none");
           menuOverlay.classList.add("opacity-100", "pointer-events-auto");
 
-          // Animate Hamburger to X perfectly
           line1.classList.add("rotate-45", "translate-y-[7px]");
           line2.classList.add("opacity-0", "translate-x-4");
           line3.classList.add("-rotate-45", "-translate-y-[7px]");
 
-          // Lock scroll
           document.body.style.overflow = "hidden";
         } else {
-          // Slide out menu
           mobileMenu.classList.add("translate-x-full");
-          // Fade out overlay
           menuOverlay.classList.add("opacity-0", "pointer-events-none");
           menuOverlay.classList.remove("opacity-100", "pointer-events-auto");
 
-          // Revert X to Hamburger
           line1.classList.remove("rotate-45", "translate-y-[7px]");
           line2.classList.remove("opacity-0", "translate-x-4");
           line3.classList.remove("-rotate-45", "-translate-y-[7px]");
 
-          // Unlock scroll
           document.body.style.overflow = "auto";
         }
       }
@@ -1393,15 +1447,13 @@
 
       if (btnShowMore && galleryWrapper) {
         btnShowMore.addEventListener("click", () => {
-          // Set to its actual scroll height to transition smoothly
           galleryWrapper.style.maxHeight = galleryWrapper.scrollHeight + "px";
           galleryFade.style.opacity = "0";
 
-          // Hide button container smoothly
           btnContainer.style.opacity = "0";
           setTimeout(() => {
             btnContainer.style.display = "none";
-            galleryWrapper.style.maxHeight = "none"; // Release height constraint
+            galleryWrapper.style.maxHeight = "none";
           }, 500);
         });
       }
