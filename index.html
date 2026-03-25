@@ -1821,7 +1821,7 @@
 
         // JIKA BERHASIL:
         // 1. Buat teks WhatsApp yang rapi dan profesional
-        const waText = `Halo Tim Langit-Langit ID!\n\nSaya ingin berkonsultasi mengenai rencana hunian saya. Berikut data singkat saya:\n\n Nama: *${payload.name}*\n Domisili: *${payload.location}*\n\nMohon informasi dan arahannya untuk proses selanjutnya. Terima kasih!`;
+        const waText = `Halo Tim Langit-Langit ID!\n\nSaya ingin berkonsultasi mengenai rencana hunian saya. Berikut data singkat saya:\n\n Nama: *${payload.name}*\n Domisili: *${payload.location}*\n penghasilan saya: *${payload.income}*\n\nMohon informasi dan arahannya untuk proses selanjutnya. Terima kasih!`;
 
         // 2. Deklarasi url WA di luar agar tetap bisa dipakai walau catch error 500
         const encodedWaText = encodeURIComponent(waText);
